@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DatRegistration:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>DatRegistration</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="DatRegistration-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="DatRegistration:war exploded" />
+    </root>
+  </artifact>
+</component>
