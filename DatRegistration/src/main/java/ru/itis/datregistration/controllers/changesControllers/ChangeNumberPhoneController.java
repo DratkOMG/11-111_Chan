@@ -1,11 +1,11 @@
 package ru.itis.datregistration.controllers.changesControllers;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
-import ru.itis.datregistration.repositories.impl.UsersRepositoryImpl;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import ru.itis.datregistration.services.UserService;
-import ru.itis.datregistration.services.impl.UserServiceImpl;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class ChangeNumberPhoneController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService userService = new UserServiceImpl(new UsersRepositoryImpl());
+        UserService userService = (UserService) getServletContext().getAttribute("user_service");
         userService.changeNumberPhone(request);
         getServletContext().getRequestDispatcher("/WEB-INF/views/changesViews/change-profile.jsp").forward(request, response);
     }

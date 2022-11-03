@@ -1,10 +1,10 @@
 package ru.itis.datregistration.controllers.changesControllers;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
-import ru.itis.datregistration.repositories.impl.AccountsRepositoryImpl;
-import ru.itis.datregistration.repositories.impl.UsersRepositoryImpl;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import ru.itis.datregistration.services.impl.AccountServiceImpl;
 
 import java.io.IOException;
@@ -19,15 +19,12 @@ public class ChangePassController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        AccountServiceImpl userService = new AccountServiceImpl(new AccountsRepositoryImpl(), new UsersRepositoryImpl());
-        userService.changePassword(request);
+        AccountServiceImpl accountServiceImpl = (AccountServiceImpl) getServletContext().getAttribute("account_service");
+        accountServiceImpl.changePassword(request);
         if (request.getAttribute("mess").equals("Change password successful")) {
             getServletContext().getRequestDispatcher("/WEB-INF/views/changesViews/change-pass-successful.jsp").forward(request, response);
         } else {
             getServletContext().getRequestDispatcher("/WEB-INF/views/changesViews/change-password.jsp").forward(request, response);
         }
-
-
-
     }
 }

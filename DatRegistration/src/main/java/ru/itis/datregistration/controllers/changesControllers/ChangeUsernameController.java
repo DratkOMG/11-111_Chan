@@ -1,11 +1,11 @@
 package ru.itis.datregistration.controllers.changesControllers;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
-import ru.itis.datregistration.repositories.impl.UsersRepositoryImpl;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import ru.itis.datregistration.services.UserService;
-import ru.itis.datregistration.services.impl.UserServiceImpl;
 
 import java.io.IOException;
 
@@ -20,8 +20,7 @@ public class ChangeUsernameController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-
-        UserService userService = new UserServiceImpl(new UsersRepositoryImpl());
+        UserService userService = (UserService) getServletContext().getAttribute("user_service");
         userService.changeUsername(request);
         getServletContext().getRequestDispatcher("/WEB-INF/views/changesViews/change-profile.jsp").forward(request, response);
 

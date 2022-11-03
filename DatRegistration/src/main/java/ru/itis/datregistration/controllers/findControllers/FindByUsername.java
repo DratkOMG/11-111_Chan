@@ -1,12 +1,12 @@
 package ru.itis.datregistration.controllers.findControllers;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
-import ru.itis.datregistration.repositories.impl.UsersRepositoryImpl;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import ru.itis.datregistration.models.User;
 import ru.itis.datregistration.services.UserService;
-import ru.itis.datregistration.services.impl.UserServiceImpl;
 
 import java.io.IOException;
 
@@ -15,14 +15,13 @@ public class FindByUsername extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/WEB-INF/views/findsViews/find-by-username.jsp").forward(request, response);
-
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String search = request.getParameter("search");
 
-        UserService userService = new UserServiceImpl(new UsersRepositoryImpl());
+        UserService userService = (UserService) getServletContext().getAttribute("user_service");
         User result = userService.findByUsername(search);
 
         if (result == null) {

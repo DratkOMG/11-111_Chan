@@ -24,6 +24,11 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.20" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:5.0.1" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha1" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0-M1" />
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:2.0.0-RC1" />
+          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:4.0.0-RC1" />
+          <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:3.0.0-RC1" />
+          <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:2.0.0-rc1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
