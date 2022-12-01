@@ -49,7 +49,7 @@
                             <img class="" src="${book.image}" alt="Book image">
                             <div class="card-body">
                                 <h4 class="card-title show_txt">
-                                    <a href="show_book_controller?bid=${book.id}" title="View Product">${book.title}</a>
+                                    <a href="show_book_controller?bid=${book.id}" title="${book.title}">${book.title}</a>
                                 </h4>
                                 <p class="card-text show_txt">${book.description}</p>
                                 <div class="row">

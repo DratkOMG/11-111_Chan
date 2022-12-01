@@ -37,7 +37,7 @@
         <img class="img-fluid" src="${hotBook.image}" width="100%" />
         <div class="card-body">
             <h4 class="card-title show_txt">
-                <a href="show_book_controller?bid=${hotBook.id}" title="View Product">${hotBook.title}</a>
+                <a href="show_book_controller?bid=${hotBook.id}" title="${hotBook.title}">${hotBook.title}</a>
             </h4>
             <p class="card-text show_txt">${hotBook.description}</p>
             <p class="bloc_left_price">${hotBook.price} $</p>
@@ -51,7 +51,7 @@
         <img class="img-fluid" src="${lastBook.image}" width="100%" />
         <div class="card-body">
             <h4 class="card-title show_txt">
-                <a href="show_book_controller?bid=${lastBook.id}" title="View Product">${lastBook.title}</a>
+                <a href="show_book_controller?bid=${lastBook.id}" title="${lastBook.title}">${lastBook.title}</a>
             </h4>
             <p class="card-text show_txt">${lastBook.description}</p>
             <p class="bloc_left_price">${lastBook.price} $</p>
