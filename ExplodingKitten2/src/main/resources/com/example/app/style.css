@@ -1,0 +1,63 @@
+.sp-main, .sp_preview_card, .sp-main * {
+    -fx-border-color: transparent;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+.sp-chat, .sp-chat * {
+     -fx-border-color: transparent;
+     -fx-background-color: rgba(0, 0, 0, 0);
+ }
+
+.sp-chat {
+    -fx-border-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+.button {
+    -fx-background-color: #22d3d6;
+    -fx-text-fill: #ed6e96;
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 2px;
+}
+
+.choice-box {
+    -fx-background-color: #22d3d6;
+    -fx-text-fill: #ed6e96;
+
+    -fx-background-radius: 10px;
+    -fx-background-insets: 2px;
+}
+
+.choice-box .label {
+    -fx-text-fill: #ed6e96;
+}
+
+#choice-box-menu-item {
+    -fx-background-color: #22d3d6   ;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 2px;
+}
+
+.chat *{
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.vbchat *{
+    -fx-border-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.text-field {
+    -fx-border-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-text-fill: white;
+
+}

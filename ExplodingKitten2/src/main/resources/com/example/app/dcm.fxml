@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="apMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.multi.ClientController2">
+
+    <children>
+        <ImageView fx:id="deckImageViews" fitHeight="92.0" fitWidth="69.0" layoutX="536.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="nextCardBtn" layoutX="559.0" layoutY="428.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="93.0" text="Deal">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Button>
+        <ScrollPane id="sp_main" fx:id="scrollPane" layoutX="352.0" layoutY="521.0" prefHeight="116.0" prefWidth="576.0" styleClass="sp-main">
+            <content>
+                <HBox fx:id="hBoxMyDeck" prefHeight="104.0" prefWidth="559.0" styleClass="sp-main" />
+            </content>
+        </ScrollPane>
+        <ImageView fx:id="isExploding" fitHeight="95.0" fitWidth="70.0" layoutX="433.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true" />
+        <HBox fx:id="previewCard" layoutX="738.0" layoutY="345.0" prefHeight="95.0" prefWidth="200.0" styleClass="sp-main" />
+        <Button fx:id="closeButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Close" />
+        <HBox fx:id="seeTheFuture" layoutX="499.0" layoutY="209.0" prefHeight="92.0" prefWidth="414.0" />
+        <ScrollPane id="sp_main" fx:id="scrollPane1" layoutX="315.0" layoutY="53.0" prefHeight="116.0" prefWidth="576.0" styleClass="sp-main">
+            <content>
+                <HBox fx:id="themDeck1" prefHeight="104.0" prefWidth="573.0" styleClass="sp-main" />
+            </content>
+        </ScrollPane>
+        <ImageView fx:id="themExploding1" fitHeight="95.0" fitWidth="70.0" layoutX="603.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true" />
+        <VBox fx:id="notificationVBox" layoutX="333.0" layoutY="293.0" prefHeight="200.0" prefWidth="100.0" />
+        <ImageView fx:id="themExploding2" fitHeight="95.0" fitWidth="70.0" layoutX="140.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" />
+        <ScrollPane id="sp_main" fx:id="scrollPane11" layoutX="36.0" layoutY="115.0" prefHeight="400.0" prefWidth="80.0" styleClass="sp-main">
+            <content>
+                <VBox fx:id="themDeck2" prefHeight="384.0" prefWidth="75.0" styleClass="sp-main" />
+            </content>
+        </ScrollPane>
+
+        <Text fx:id="myName" fill="#22d3d6" layoutX="544.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="173.0">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="playerName1" fill="#22d3d6" layoutX="547.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="166.0">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="playerName2" fill="#22d3d6" layoutX="140.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Text>
+        <Button fx:id="readyButton" layoutX="525.0" layoutY="408.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="155.0" styleClass="button" text="READY" />
+        <Button fx:id="countCard" layoutX="536.0" layoutY="307.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="66.0" />
+        <ScrollPane id="sp_main" fx:id="scrollPane111" layoutX="1116.0" layoutY="115.0" prefHeight="400.0" prefWidth="80.0" styleClass="sp-main">
+            <content>
+                <VBox fx:id="themDeck0" prefHeight="384.0" prefWidth="75.0" styleClass="sp-main" />
+            </content>
+        </ScrollPane>
+        <ImageView fx:id="themExploding0" fitHeight="95.0" fitWidth="70.0" layoutX="1012.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="cardsPlayed" fitHeight="92.0" fitWidth="69.0" layoutX="638.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true" />
+        <Text fx:id="danger" fill="#e40808" layoutX="452.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="426.205078125">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font></Text>
+        <Text fx:id="playerName0" fill="#22d3d6" layoutX="951.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Text>
+        <ScrollPane id="sp_main" fx:id="sp_chat" layoutX="30.0" layoutY="521.0" prefHeight="140.0" prefWidth="286.0" styleClass="sp-chat">
+            <content>
+                <VBox fx:id="vb_mess" prefHeight="131.0" prefWidth="270.0" />
+            </content>
+        </ScrollPane>
+        <TextField fx:id="tf_mess" layoutX="30.0" layoutY="670.0" prefWidth="233.0" styleClass="text-field" />
+        <Button fx:id="btn_send" layoutX="268.0" layoutY="670.0" mnemonicParsing="false" text="Send" />
+    </children>
+</AnchorPane>
